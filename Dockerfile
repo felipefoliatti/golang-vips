@@ -1,5 +1,4 @@
-FROM golang:alpine
-MAINTAINER Joel Chen <joelchen@msn.com>
+FROM golang:1.11-alpine
 WORKDIR /tmp
 
 ENV LIBVIPS_VERSION=8.5.7
