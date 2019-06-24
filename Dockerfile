@@ -23,7 +23,7 @@ RUN apk update && \
 
 # Install libvips
     wget -O- https://github.com/jcupitt/libvips/archive/v${LIBVIPS_VERSION}.tar.gz | tar xzC /tmp && \
-    cd /tmp/vips-${LIBVIPS_VERSION} && \
+    cd /tmp/v${LIBVIPS_VERSION} && \
     ./configure --prefix=/usr \
                 --without-python \
                 --without-gsf \
