@@ -22,7 +22,7 @@ RUN apk update && \
     autoreconf -fiv && ./configure --prefix=/usr && make install && \
 
 # Install libvips
-    wget -O- https://github.com/jcupitt/libvips/archive/v${LIBVIPS_VERSION}.tar.gz | tar xzC /tmp && \
+    wget -O- https://github.com/libvips/libvips/releases/download/v${LIBVIPS_VERSION}/vips-${LIBVIPS_VERSION}.tar.gz | tar xzC /tmp/ && \
     cd /tmp/v${LIBVIPS_VERSION} && \
     ./configure --prefix=/usr \
                 --without-python \
