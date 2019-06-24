@@ -18,7 +18,7 @@ RUN apk update && \
     cd /tmp && \
     git clone git://github.com/mozilla/mozjpeg.git && \
     cd /tmp/mozjpeg && \
-    git checkout ${MOZJPEG_VERSION} && \
+    git checkout 9a1d32095bb6d7c359c8eb8f8f116469197433aa && \
     autoreconf -fiv && ./configure --prefix=/usr && make install && \
 
 # Install libvips
