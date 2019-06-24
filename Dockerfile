@@ -1,7 +1,7 @@
 FROM golang:1.11-alpine
 WORKDIR /tmp
 
-ENV LIBVIPS_VERSION=8.5.7
+ENV LIBVIPS_VERSION=8.8.0
 
 RUN apk update && \
     apk upgrade && \
@@ -23,7 +23,7 @@ RUN apk update && \
 
 # Install libvips
     wget -O- https://github.com/libvips/libvips/releases/download/v${LIBVIPS_VERSION}/vips-${LIBVIPS_VERSION}.tar.gz | tar xzC /tmp/ && \
-    cd /tmp/v${LIBVIPS_VERSION} && \
+    cd /tmp/vips-${LIBVIPS_VERSION} && \
     ./configure --prefix=/usr \
                 --without-python \
                 --without-gsf \
